@@ -18,10 +18,6 @@ import UnauthPage from "./pages/unauth-page";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { checkAuth } from "./store/auth-slice";
-import { Skeleton } from "@/components/ui/skeleton";
-
-
-
 
 
 function App() {
@@ -34,7 +30,7 @@ function App() {
     dispatch(checkAuth());
   }, [dispatch]);
 
-    if (isLoading) return <Skeleton className="w-[800] bg-black h-[600px]" />;
+  
 
   console.log(isLoading, user);
 
