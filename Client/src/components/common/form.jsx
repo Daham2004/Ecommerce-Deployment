@@ -39,7 +39,6 @@ function CommonForm({
             }
           />
         );
-
         break;
       case "select":
         element = (
@@ -66,7 +65,6 @@ function CommonForm({
             </SelectContent>
           </Select>
         );
-
         break;
       case "textarea":
         element = (
@@ -83,9 +81,7 @@ function CommonForm({
             }
           />
         );
-
         break;
-
       default:
         element = (
           <Input
