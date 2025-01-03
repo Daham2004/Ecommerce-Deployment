@@ -40,6 +40,7 @@ Make sure to set the following environment variables in the docker-compose.yml f
 MONGO_URI: The connection string for your MongoDB database.
 
 2. **Technologies Used**
+
       Frontend:
                React, Tailwind CSS, Vite
       Backend:
