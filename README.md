@@ -4,6 +4,7 @@ This is a full-stack e-commerce project with a React frontend and a Node.js back
 
 ## Project Structure
 ![image](https://github.com/user-attachments/assets/2e586c9f-1157-4bac-b8d9-8707836b44a0)
+![image](https://github.com/user-attachments/assets/8d69515f-f9d2-44e4-8832-eaa9940cef6f)
 
 
 
