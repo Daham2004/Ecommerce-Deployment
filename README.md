@@ -43,8 +43,12 @@ MONGO_URI: The connection string for your MongoDB database.
 
       Frontend:
                React, Tailwind CSS, Vite
+
+
       Backend:
                Node.js, Express.js, MongoDB
+
+
       Containerization: 
                Docker, Docker Compose
 
