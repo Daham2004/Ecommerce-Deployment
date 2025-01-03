@@ -3,56 +3,8 @@
 This is a full-stack e-commerce project with a React frontend and a Node.js backend. The project uses MongoDB as the database and is containerized using Docker.
 
 ## Project Structure
-E-commerce/
-├── Client/
-│   ├── .github/
-│   │   └── workflows/
-│   ├── .gitignore
-│   ├── components.json
-│   ├── Dockerfile
-│   ├── eslint.config.js
-│   ├── index.html
-│   ├── jsconfig.json
-│   ├── package.json
-│   ├── postcss.config.js
-│   ├── public/
-│   ├── README.md
-│   ├── src/
-│   │   ├── App.css
-│   │   ├── App.jsx
-│   │   ├── assets/
-│   │   ├── components/
-│   │   ├── config/
-│   │   └── ...
-│   ├── tailwind.config.js
-│   └── vite.config.js
-├── Server/
-│   ├── .dockerignore
-│   ├── .github/
-│   │   └── workflows/
-│   ├── .gitignore
-│   ├── controllers/
-│   │   ├── admin/
-│   │   ├── auth/
-│   │   ├── common/
-│   │   └── shop/
-│   ├── Dockerfile
-│   ├── helpers/
-│   │   ├── cloudinary.js
-│   │   └── paypal.js
-│   ├── models/
-│   │   ├── Address.js
-│   │   ├── Cart.js
-│   │   ├── Feature.js
-│   │   ├── Order.js
-│   │   ├── Product.js
-│   │   ├── Review.js
-│   │   └── User.js
-│   ├── package.json
-│   ├── routes/
-│   └── server.js
-├── docker-compose.yml
-└── up.sh
+![image](https://github.com/user-attachments/assets/2e586c9f-1157-4bac-b8d9-8707836b44a0)
+
 
 
 
