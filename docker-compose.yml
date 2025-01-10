@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   server:
     build:
@@ -11,7 +9,6 @@ services:
     volumes:
       - ./server:/app
       - /app/node_modules
-      
     command: npm run dev
 
   client:
@@ -21,3 +18,4 @@ services:
       - "5173:5173"
     depends_on:
       - server
+    command: npm run dev -- --host
