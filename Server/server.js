@@ -15,14 +15,18 @@ const shopReviewRouter = require("./routes/shop/review-routes");
 
 const commonFeatureRouter = require("./routes/common/feature-routes");
 
+const http = require("http");
+const { broadcast } = require("./websocket");
 
 mongoose
   .connect("mongodb+srv://new:1234@cluster0.pcjwc.mongodb.net/")
   .then(() => console.log("MongoDB connected"))
   .catch((error) => console.log(error));
 
+
 const app = express();
 const PORT = process.env.PORT || 5000;
+const server = http.createServer(app);
 
 app.use(
   cors({
@@ -54,4 +58,14 @@ app.use("/api/shop/review", shopReviewRouter);
 
 app.use("/api/common/feature", commonFeatureRouter);
 
-app.listen(PORT, () => console.log(`Server is now running on port ${PORT}`));
+app.post("/api/admin/update-order-status", (req, res) => {
+  const { orderId, status, userId } = req.body;
+  // Update order status in the database...
+
+  // Broadcast the status update to all connected clients
+  broadcast({ orderId, status, userId });
+
+  res.sendStatus(200);
+});
+
+server.listen(PORT, () => console.log(`Server is now running on port ${PORT}`));
