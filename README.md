@@ -9,8 +9,12 @@ This E-commerce project is a comprehensive full-stack application designed to en
 ![image.alt](https://github.com/Plymouth-University/coursework-group_41/blob/aaa13cec68966935dd20784a3bc88e4a270b99b8/Screenshot%202025-01-12%20085346.png)
 
 Features
+
 User:
+
+
 Product Reviews:
+
 
 Write, edit, and delete reviews.
 Instant updates on ratings and star percentages.
@@ -21,29 +25,45 @@ Create new orders and view order history.
 Profile Management:
 
 Manage email, username, and multiple addresses.
+
+
 Shopping Cart:
 
 Add products, adjust quantities, and view subtotals.
+
 Admin:
+
+
 Product Management:
 
 Add, edit, delete, and soft-delete products.
 Manage product attributes like name and stock.
+
+
 Order Management:
 
+
 View and update order details and status.
+
 Security & User Experience:
+
 Secure Authentication:
 
 Sigin, signup and logout.
+
 Intuitive Interface:
 
 Powered by Tailwind CSS for a modern, responsive, and user-friendly experience.
+
 Scalability:
+
 Built for Growth:
 
 Scalable architecture to handle increasing user demands.
+
+
 Containerization:
+
 
 Docker and Docker Compose for easy deployment and scalability.
 
