@@ -1,4 +1,4 @@
-name: CI Workflow
+name: CI testing Workflow
 
 on:
   push:
@@ -17,17 +17,24 @@ jobs:
     - name: Set up Docker
       run: |
         docker --version
+        docker compose version
 
     - name: Build and Start Services
       run: |
-        docker-compose up -d --build
+        docker compose up -d --build
 
-    - name: Run Tests in Client Container
+    - name: Wait for Services to Be Ready
       run: |
-        docker-compose exec client npm test
+        until curl -s http://localhost:5000/health || curl -s http://localhost:5173; do
+          echo "Waiting for services to be ready..."
+          sleep 5
+        done
 
-    - name: Stop and Clean Up
+    - name: Run Tests in Client
+      run: |
+        docker compose exec client npm test
+
+    - name: Stop Services
       if: always()
       run: |
-        docker-compose down
-
+        docker compose down
