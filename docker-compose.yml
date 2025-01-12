@@ -1,37 +1,40 @@
-services:
-  server:
-    build:
-      context: ./server
-    ports:
-      - "5000:5000"
-    environment:
-      - MONGO_URI=mongodb+srv://new:1234@cluster0.pcjwc.mongodb.net/
-    volumes:
-      - ./server:/app
-      - /app/node_modules
-    command: npm run dev
+name: CI Workflow
 
-  client:
-    build:
-      context: ./client
-    ports:
-      - "5173:5173"
-    depends_on:
-      - server
-    command: npm run dev -- --host
+on:
+  push:
+    branches:
+      - main
+  pull_request:
 
-  server-test:
-    build:
-      context: ./server
-      target: test
-    volumes:
-      - ./server:/app
-    command: npm test
+jobs:
+  test:
+    runs-on: ubuntu-latest
 
-  client-test:
-    build:
-      context: ./client
-      target: test
-    volumes:
-      - ./client:/app
-    command: npm test
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Docker
+      run: |
+        docker --version
+        docker compose version
+
+    - name: Build and Start Services
+      run: |
+        docker compose up -d --build
+
+    - name: Wait for Services to Be Ready
+      run: |
+        until curl -s http://localhost:5000/health || curl -s http://localhost:5173; do
+          echo "Waiting for services to be ready..."
+          sleep 5
+        done
+
+    - name: Run Tests in Client
+      run: |
+        docker compose exec client npm test
+
+    - name: Stop Services
+      if: always()
+      run: |
+        docker compose down
