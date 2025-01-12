@@ -1,0 +1,27 @@
+name: CI Workflow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Docker
+      run: |
+        docker --version
+
+    - name: Build Docker Image
+      run: |
+        docker build -t my-app .
+
+    - name: Run Tests
+      run: |
+        docker run --rm my-app npm test
