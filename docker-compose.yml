@@ -1,13 +1,13 @@
 services:
   server:
     build:
-      context: ./server
+      context: ./Server
     ports:
       - "5000:5000"
     environment:
       - MONGO_URI=mongodb+srv://new:1234@cluster0.pcjwc.mongodb.net/
     volumes:
-      - ./server:/app
+      - ./Server:/app
       - /app/node_modules
     command: npm run dev
 
@@ -25,13 +25,13 @@ services:
       context: ./Server
       target: test
     volumes:
-      - ./server:/app
+      - ./Server:/app
     command: npm test
 
   client-test:
     build:
-      context: ./client
+      context: ./Client
       target: test
     volumes:
-      - ./client:/app
+      - ./Client:/app
     command: npm test
