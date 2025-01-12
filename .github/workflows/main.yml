@@ -18,10 +18,16 @@ jobs:
       run: |
         docker --version
 
-    - name: Build Docker Image
+    - name: Build and Start Services
       run: |
-        docker-compose build
+        docker-compose up -d --build
 
-    - name: Run Tests
+    - name: Run Tests in Client Container
       run: |
-        docker run npm test
+        docker-compose exec client npm test
+
+    - name: Stop and Clean Up
+      if: always()
+      run: |
+        docker-compose down
+
