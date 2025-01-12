@@ -5,6 +5,10 @@ This E-commerce project is a comprehensive full-stack application designed to en
 
 ![image.alt](https://github.com/Plymouth-University/coursework-group_41/blob/c2fe8e5d5c3d089c5f65d392caced9607e5a9665/Screenshot%202025-01-12%20085155.png)
 
+![image.alt](https://github.com/Plymouth-University/coursework-group_41/blob/aaa13cec68966935dd20784a3bc88e4a270b99b8/Screenshot%202025-01-12%20085346.png
+)
+
+
 
 
 
