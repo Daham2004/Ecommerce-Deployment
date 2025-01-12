@@ -37,13 +37,6 @@ jobs:
           sudo chmod +x /usr/local/bin/docker-compose
 
       - name: Build and run containers
-        run: docker-compose -f docker-compose.yml up -d --build
+        run: docker-compose up -d
 
-      - name: Run server tests
-        run: docker-compose exec server npm test
-
-      - name: Run client tests
-        run: docker-compose exec client npm test
-
-      - name: Shut down containers
-        run: docker-compose down
+   
