@@ -8,64 +8,61 @@ This E-commerce project is a comprehensive full-stack application designed to en
 
 ![image.alt](https://github.com/Plymouth-University/coursework-group_41/blob/aaa13cec68966935dd20784a3bc88e4a270b99b8/Screenshot%202025-01-12%20085346.png)
 
-Features
 
-User:
+# Features
 
+## User
 
-Product Reviews:
+### Product Reviews
+- Write, edit, and delete reviews.
+- Instant updates on ratings and star percentages.
 
+### Wishlist
+- Add, remove, and annotate products with personalized notes.
 
-Write, edit, and delete reviews.
-Instant updates on ratings and star percentages.
+### Order Management
+- Create new orders and view order history.
 
-Order Management:
+### Profile Management
+- Manage email, username, and multiple addresses.
 
-Create new orders and view order history.
-Profile Management:
+### Shopping Cart
+- Add products, adjust quantities, and view subtotals.
 
-Manage email, username, and multiple addresses.
+---
 
+## Admin
 
-Shopping Cart:
+### Product Management
+- Add, edit, delete, and soft-delete products.
+- Manage product attributes like name, description, and stock.
 
-Add products, adjust quantities, and view subtotals.
+### Order Management
+- View and update order details and status.
 
-Admin:
+---
 
+## Security & User Experience
 
-Product Management:
+### Secure Authentication
+- Login, signup, OTP verification, password reset, and logout.
 
-Add, edit, delete, and soft-delete products.
-Manage product attributes like name and stock.
+### Intuitive Interface
+- Powered by Tailwind CSS for a modern, responsive, and user-friendly experience.
 
+---
 
-Order Management:
+## Scalability
 
+### Built for Growth
+- Scalable architecture to handle increasing user demands.
 
-View and update order details and status.
-
-Security & User Experience:
-
-Secure Authentication:
-
-Sigin, signup and logout.
-
-Intuitive Interface:
-
-Powered by Tailwind CSS for a modern, responsive, and user-friendly experience.
-
-Scalability:
-
-Built for Growth:
-
-Scalable architecture to handle increasing user demands.
-
-
-Containerization:
+### Containerization
+- Docker and Docker Compose for easy deployment and scalability.
 
 
-Docker and Docker Compose for easy deployment and scalability.
+
+
 
 
 
