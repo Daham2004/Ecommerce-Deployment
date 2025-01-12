@@ -13,6 +13,10 @@ RUN npm install
 # Copy the rest of the application files
 COPY . .
 
+# Run tests
+FROM build AS test
+CMD ["npm", "test"]
+
 # Stage 2: Run the React app with Node.js
 FROM node:18.20.5
 
@@ -26,4 +30,4 @@ COPY --from=build /app /app
 EXPOSE 5173
 
 # Start the React app using npm
-CMD ["npm", "run","dev"]
+CMD ["npm", "run", "dev"]

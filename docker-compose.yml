@@ -5,7 +5,7 @@ services:
     ports:
       - "5000:5000"
     environment:
-      - MONGO_URI=mongodb+srv://Ecommerce:1234@cluster0.wlykj.mongodb.net/
+      - MONGO_URI=mongodb+srv://new:1234@cluster0.pcjwc.mongodb.net/
     volumes:
       - ./server:/app
       - /app/node_modules
@@ -19,3 +19,19 @@ services:
     depends_on:
       - server
     command: npm run dev -- --host
+
+  server-test:
+    build:
+      context: ./server
+      target: test
+    volumes:
+      - ./server:/app
+    command: npm test
+
+  client-test:
+    build:
+      context: ./client
+      target: test
+    volumes:
+      - ./client:/app
+    command: npm test
