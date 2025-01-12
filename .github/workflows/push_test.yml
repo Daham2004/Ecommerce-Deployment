@@ -38,15 +38,15 @@ jobs:
         run: |
           docker-compose -f docker-compose.yml build
 
-      # Step 5: Install npm dependencies for the server
-      - name: Install Server Dependencies
+      # Step 5: Run npm run dev for the server
+      - name: Run Server Dev
         run: |
-          docker-compose -f docker-compose.yml run server npm install
+          docker-compose -f docker-compose.yml run server npm run dev
 
-      # Step 6: Install npm dependencies for the client
-      - name: Install Client Dependencies
+      # Step 6: Run npm run dev for the client
+      - name: Run Client Dev
         run: |
-          docker-compose -f docker-compose.yml run client npm install
+          docker-compose -f docker-compose.yml run client npm run dev
 
       # Step 7: Run server tests
       - name: Run Server Tests
