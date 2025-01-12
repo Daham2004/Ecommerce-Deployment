@@ -14,11 +14,9 @@ This E-commerce project is a comprehensive full-stack application designed to en
 ## User
 
 ### Product Reviews
-- Write, edit, and delete reviews.
-- Instant updates on ratings and star percentages.
+- Write reviews.
+- Instant ratings and star percentages.
 
-### Wishlist
-- Add, remove, and annotate products with personalized notes.
 
 ### Order Management
 - Create new orders and view order history.
@@ -45,7 +43,7 @@ This E-commerce project is a comprehensive full-stack application designed to en
 ## Security & User Experience
 
 ### Secure Authentication
-- Login, signup, OTP verification, password reset, and logout.
+- Login, signup, and logout.
 
 ### Intuitive Interface
 - Powered by Tailwind CSS for a modern, responsive, and user-friendly experience.
@@ -61,8 +59,60 @@ This E-commerce project is a comprehensive full-stack application designed to en
 - Docker and Docker Compose for easy deployment and scalability.
 
 
+# Project Setup
+## Clone the Project
+Clone the repository using the following command:
+
+git clone https://github.com/Plymouth-University/coursework-group_41.git
 
 
+## Navigate to the Project Directory
+Change to the project directory:
+
+cd coursework-group_41
+
+
+## Option 1: Running the Project with Docker Compose
+Ensure Docker and Docker Compose are installed and running on your machine.
+
+Start the services using Docker Compose:
+
+docker-compose up --build
+
+This will start both the client and server services as defined in the `docker-compose.yml` file. The client will be accessible at [http://localhost:5173](http://localhost:5173) and the server at [http://localhost:5000](http://localhost:5000).
+
+## Option 2: Running the Project without Docker
+
+### Install Dependencies for Frontend and Backend Separately
+**Tip:** To efficiently install dependencies for both frontend and backend simultaneously, use split terminals.
+
+### Install Frontend Dependencies
+Navigate to the client directory and install dependencies:
+
+cd client
+
+npm install
+
+
+
+### Start the Backend Server
+Navigate to the server directory:
+
+cd server
+
+Start the server:
+
+npm run dev
+
+
+### Start the Frontend Client
+Open a new terminal and navigate to the client directory:
+
+cd client
+
+Start the client:
+
+npm run dev
 
 
 
