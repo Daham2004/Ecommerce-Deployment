@@ -17,10 +17,9 @@ jobs:
     - name: Set up Docker
       run: |
         docker --version
-        docker compose version
+        docker compose version || sudo apt-get install docker-compose
 
     - name: Build and Start Services
       run: |
         docker-compose build
         docker-compose up
-    
