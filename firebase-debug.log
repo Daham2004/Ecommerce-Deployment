@@ -1,0 +1,116 @@
+[debug] [2025-01-13T18:23:06.434Z] ----------------------------------------------------------------------
+[debug] [2025-01-13T18:23:06.435Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Daham\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2025-01-13T18:23:06.435Z] CLI Version:   13.29.1
+[debug] [2025-01-13T18:23:06.436Z] Platform:      win32
+[debug] [2025-01-13T18:23:06.436Z] Node Version:  v22.12.0
+[debug] [2025-01-13T18:23:06.436Z] Time:          Mon Jan 13 2025 23:53:06 GMT+0530 (India Standard Time)
+[debug] [2025-01-13T18:23:06.436Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-01-13T18:23:06.438Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2025-01-13T18:23:06.466Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-01-13T18:23:06.466Z] > authorizing via signed-in user (mytern12@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Daham\Ecommerce-Deployment
+
+[debug] [2025-01-13T18:23:07.351Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2025-01-13T18:23:07.351Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2025-01-13T18:24:40.599Z] Checked if tokens are valid: false, expires at: 1735048643775
+[debug] [2025-01-13T18:24:40.599Z] Checked if tokens are valid: false, expires at: 1735048643775
+[debug] [2025-01-13T18:24:40.599Z] > refreshing access token with scopes: []
+[debug] [2025-01-13T18:24:40.600Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-01-13T18:24:40.600Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-01-13T18:24:41.205Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-01-13T18:24:41.205Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-01-13T18:24:41.210Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2025-01-13T18:24:41.210Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"ecom41","name":"ecom41"}
+[debug] [2025-01-13T18:24:43.245Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 200
+[debug] [2025-01-13T18:24:43.245Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"name":"operations/cp.6661046069633590218"}
+[debug] [2025-01-13T18:24:43.246Z] Checked if tokens are valid: true, expires at: 1736796280205
+[debug] [2025-01-13T18:24:43.246Z] Checked if tokens are valid: true, expires at: 1736796280205
+[debug] [2025-01-13T18:24:43.246Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6661046069633590218 [none]
+[debug] [2025-01-13T18:24:44.947Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6661046069633590218 200
+[debug] [2025-01-13T18:24:44.947Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6661046069633590218 {"name":"operations/cp.6661046069633590218"}
+[debug] [2025-01-13T18:24:45.449Z] [Project Creation Poller] Retrying task index 0
+[debug] [2025-01-13T18:24:45.450Z] Checked if tokens are valid: true, expires at: 1736796280205
+[debug] [2025-01-13T18:24:45.450Z] Checked if tokens are valid: true, expires at: 1736796280205
+[debug] [2025-01-13T18:24:45.450Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6661046069633590218 [none]
+[debug] [2025-01-13T18:24:46.047Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6661046069633590218 200
+[debug] [2025-01-13T18:24:46.047Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6661046069633590218 {"name":"operations/cp.6661046069633590218","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","gettable":true}}
+[debug] [2025-01-13T18:24:47.049Z] [Project Creation Poller] Retrying task index 0
+[debug] [2025-01-13T18:24:47.050Z] Checked if tokens are valid: true, expires at: 1736796280205
+[debug] [2025-01-13T18:24:47.050Z] Checked if tokens are valid: true, expires at: 1736796280205
+[debug] [2025-01-13T18:24:47.050Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6661046069633590218 [none]
+[debug] [2025-01-13T18:24:47.656Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6661046069633590218 200
+[debug] [2025-01-13T18:24:47.656Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6661046069633590218 {"name":"operations/cp.6661046069633590218","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","gettable":true,"ready":true},"done":true,"response":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.Project","projectNumber":"606410841177","projectId":"ecom41","lifecycleState":"ACTIVE","name":"ecom41","createTime":"2025-01-13T18:24:45.624769Z"}}
+[debug] [2025-01-13T18:24:47.657Z] Checked if tokens are valid: true, expires at: 1736796280205
+[debug] [2025-01-13T18:24:47.658Z] Checked if tokens are valid: true, expires at: 1736796280205
+[debug] [2025-01-13T18:24:47.658Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1beta1/projects/ecom41:addFirebase [none]
+[debug] [2025-01-13T18:24:51.768Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1beta1/projects/ecom41:addFirebase 200
+[debug] [2025-01-13T18:24:51.768Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/ecom41:addFirebase {"name":"operations/workflows/Y2I5MjQ2NDItZTVkNy00NmVlLTk1ZTItMzg5YjIxYTk0YmQ5"}
+[debug] [2025-01-13T18:24:51.768Z] Checked if tokens are valid: true, expires at: 1736796280205
+[debug] [2025-01-13T18:24:51.768Z] Checked if tokens are valid: true, expires at: 1736796280205
+[debug] [2025-01-13T18:24:51.768Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/Y2I5MjQ2NDItZTVkNy00NmVlLTk1ZTItMzg5YjIxYTk0YmQ5 [none]
+[debug] [2025-01-13T18:24:55.317Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/Y2I5MjQ2NDItZTVkNy00NmVlLTk1ZTItMzg5YjIxYTk0YmQ5 200
+[debug] [2025-01-13T18:24:55.317Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/Y2I5MjQ2NDItZTVkNy00NmVlLTk1ZTItMzg5YjIxYTk0YmQ5 {"name":"operations/workflows/Y2I5MjQ2NDItZTVkNy00NmVlLTk1ZTItMzg5YjIxYTk0YmQ5"}
+[debug] [2025-01-13T18:24:55.817Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2025-01-13T18:24:55.817Z] Checked if tokens are valid: true, expires at: 1736796280205
+[debug] [2025-01-13T18:24:55.817Z] Checked if tokens are valid: true, expires at: 1736796280205
+[debug] [2025-01-13T18:24:55.818Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/Y2I5MjQ2NDItZTVkNy00NmVlLTk1ZTItMzg5YjIxYTk0YmQ5 [none]
+[debug] [2025-01-13T18:24:56.970Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/Y2I5MjQ2NDItZTVkNy00NmVlLTk1ZTItMzg5YjIxYTk0YmQ5 200
+[debug] [2025-01-13T18:24:56.971Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/Y2I5MjQ2NDItZTVkNy00NmVlLTk1ZTItMzg5YjIxYTk0YmQ5 {"name":"operations/workflows/Y2I5MjQ2NDItZTVkNy00NmVlLTk1ZTItMzg5YjIxYTk0YmQ5"}
+[debug] [2025-01-13T18:24:57.985Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2025-01-13T18:24:57.985Z] Checked if tokens are valid: true, expires at: 1736796280205
+[debug] [2025-01-13T18:24:57.985Z] Checked if tokens are valid: true, expires at: 1736796280205
+[debug] [2025-01-13T18:24:57.985Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/Y2I5MjQ2NDItZTVkNy00NmVlLTk1ZTItMzg5YjIxYTk0YmQ5 [none]
+[debug] [2025-01-13T18:24:58.829Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/Y2I5MjQ2NDItZTVkNy00NmVlLTk1ZTItMzg5YjIxYTk0YmQ5 200
+[debug] [2025-01-13T18:24:58.829Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/Y2I5MjQ2NDItZTVkNy00NmVlLTk1ZTItMzg5YjIxYTk0YmQ5 {"name":"operations/workflows/Y2I5MjQ2NDItZTVkNy00NmVlLTk1ZTItMzg5YjIxYTk0YmQ5"}
+[debug] [2025-01-13T18:25:00.844Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2025-01-13T18:25:00.845Z] Checked if tokens are valid: true, expires at: 1736796280205
+[debug] [2025-01-13T18:25:00.845Z] Checked if tokens are valid: true, expires at: 1736796280205
+[debug] [2025-01-13T18:25:00.845Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/Y2I5MjQ2NDItZTVkNy00NmVlLTk1ZTItMzg5YjIxYTk0YmQ5 [none]
+[debug] [2025-01-13T18:25:02.055Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/Y2I5MjQ2NDItZTVkNy00NmVlLTk1ZTItMzg5YjIxYTk0YmQ5 200
+[debug] [2025-01-13T18:25:02.055Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/Y2I5MjQ2NDItZTVkNy00NmVlLTk1ZTItMzg5YjIxYTk0YmQ5 {"name":"operations/workflows/Y2I5MjQ2NDItZTVkNy00NmVlLTk1ZTItMzg5YjIxYTk0YmQ5"}
+[debug] [2025-01-13T18:25:06.067Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2025-01-13T18:25:06.067Z] Checked if tokens are valid: true, expires at: 1736796280205
+[debug] [2025-01-13T18:25:06.067Z] Checked if tokens are valid: true, expires at: 1736796280205
+[debug] [2025-01-13T18:25:06.067Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/Y2I5MjQ2NDItZTVkNy00NmVlLTk1ZTItMzg5YjIxYTk0YmQ5 [none]
+[debug] [2025-01-13T18:25:07.124Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/Y2I5MjQ2NDItZTVkNy00NmVlLTk1ZTItMzg5YjIxYTk0YmQ5 200
+[debug] [2025-01-13T18:25:07.124Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/Y2I5MjQ2NDItZTVkNy00NmVlLTk1ZTItMzg5YjIxYTk0YmQ5 {"name":"operations/workflows/Y2I5MjQ2NDItZTVkNy00NmVlLTk1ZTItMzg5YjIxYTk0YmQ5","done":true,"response":{"@type":"type.googleapis.com/google.firebase.service.v1beta1.FirebaseProject","projectId":"ecom41","projectNumber":"606410841177","displayName":"ecom41","name":"projects/ecom41","resources":{"hostingSite":"ecom41"}}}
+[info] 
+[info] === Your Firebase project is ready! ===
+[info] 
+[info] Project information:
+[info]    - Project ID: ecom41
+[info]    - Project Name: ecom41
+[info] 
+[info] Firebase console is available at
+[info] https://console.firebase.google.com/project/ecom41/overview
+[info] i  Using project ecom41 (ecom41) 
+[info] 
+=== Hosting Setup
+[debug] [2025-01-13T18:25:07.134Z] Checked if tokens are valid: true, expires at: 1736796280205
+[debug] [2025-01-13T18:25:07.134Z] Checked if tokens are valid: true, expires at: 1736796280205
+[debug] [2025-01-13T18:25:07.134Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ecom41 [none]
+[debug] [2025-01-13T18:25:08.259Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ecom41 200
+[debug] [2025-01-13T18:25:08.259Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ecom41 {"projectId":"ecom41","projectNumber":"606410841177","displayName":"ecom41","name":"projects/ecom41","resources":{"hostingSite":"ecom41"},"state":"ACTIVE","etag":"1_8a62bf99-3709-43dd-bf0a-36db8e968f74"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
