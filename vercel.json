@@ -2,10 +2,10 @@
   "version": 2,
   "builds": [
     {
-      "src": "client/package.json",  // Point to the React app's package.json
-      "use": "@vercel/static-build",  // Tells Vercel to use a static build for React
+      "src": "client/package.json",  // Adjust the path if needed
+      "use": "@vercel/static-build",  // Use static build for React app
       "config": {
-        "distDir": "dist"  // Vite's output directory (default is "dist")
+        "distDir": "dist"  // Vite's default build directory
       }
     }
   ],
