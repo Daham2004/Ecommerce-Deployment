@@ -14,6 +14,7 @@ jobs:
           cd Client  # Change to the client folder
           npm ci     # Install dependencies
           npm run build  # Build the project
+          cd ..  # Return to the root directory
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
