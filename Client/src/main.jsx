@@ -16,40 +16,40 @@ function WebSocketApp() {
   // Simulate user type; replace this with real logic in your app
   const userType = sessionStorage.getItem("userType") || "user"; // Example: admin or user
 
-  // useEffect(() => {
-  //  // const ws = new WebSocket("ws://http://localhost:5000");
+  useEffect(() => {
+   const ws = new WebSocket("ws://http://localhost8080");
 
-  //   ws.onopen = () => {
-  //     console.log("Connected to WebSocket server");
-  //   };
+    ws.onopen = () => {
+      console.log("Connected to WebSocket server");
+    };
 
-  //   ws.onmessage = (event) => {
-  //     console.log("Message received from server:", event.data);
-  //     const data = JSON.parse(event.data);
+    ws.onmessage = (event) => {
+      console.log("Message received from server:", event.data);
+      const data = JSON.parse(event.data);
 
-  //     if (data.orderId && data.status) {
-  //       // Generate message including orderId for both roles
-  //       const message =
-  //         userType === "admin"
-  //           ? `Order ${data.orderId} status updated to: ${data.status}` // Admin-specific message
-  //           : `Your order (ID: ${data.orderId}) status has been updated to: ${data.status}`; // User-specific message
+      if (data.orderId && data.status) {
+        // Generate message including orderId for both roles
+        const message =
+          userType === "admin"
+            ? `Order ${data.orderId} status updated to: ${data.status}` // Admin-specific message
+            : `Your order (ID: ${data.orderId}) status has been updated to: ${data.status}`; // User-specific message
 
-  //       setModalMessage(message);
-  //       setIsModalOpen(true);
+        setModalMessage(message);
+        setIsModalOpen(true);
 
-  //       // Store notifications for debugging or logs
-  //       setNotifications((prev) => [...prev, data]);
-  //     }
-  //   };
+        // Store notifications for debugging or logs
+        setNotifications((prev) => [...prev, data]);
+      }
+    };
 
-  //   ws.onclose = () => {
-  //     console.log("Disconnected from WebSocket server");
-  //   };
+    ws.onclose = () => {
+      console.log("Disconnected from WebSocket server");
+    };
 
-  //   return () => {
-  //     ws.close();
-  //   };
-  // }, [userType]);
+    return () => {
+      ws.close();
+    };
+  }, [userType]);
 
   const closeModal = () => {
     setIsModalOpen(false);
