@@ -14,6 +14,9 @@ jobs:
           cd Client  # Change to the client folder
           npm ci     # Install dependencies
           npm run build  # Build the project
+          cd ../Server
+          npm ci
+          npm run build
           cd ..  # Return to the root directory
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
@@ -21,3 +24,4 @@ jobs:
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_ECOM41 }}
           channelId: live
           projectId: ecom41
+          targets: client,server
