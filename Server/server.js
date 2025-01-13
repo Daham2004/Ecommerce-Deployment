@@ -6,6 +6,8 @@ const authRouter = require("./routes/auth/auth-routes");
 const adminProductsRouter = require("./routes/admin/products-routes");
 const adminOrderRouter = require("./routes/admin/order-routes");
 
+const socketIo = require('socket.io');
+
 const shopProductsRouter = require("./routes/shop/products-routes");
 const shopCartRouter = require("./routes/shop/cart-routes");
 const shopAddressRouter = require("./routes/shop/address-routes");
@@ -17,6 +19,7 @@ const commonFeatureRouter = require("./routes/common/feature-routes");
 
 const http = require("http");
 const { broadcast } = require("./websocket");
+const { Console } = require("console");
 
 mongoose
   .connect("mongodb+srv://new:1234@cluster0.pcjwc.mongodb.net/")
@@ -68,4 +71,39 @@ app.post("/api/admin/update-order-status", (req, res) => {
   res.sendStatus(200);
 });
 
+const io = socketIo(server, {
+  cors: {
+    origin: "*",
+    methods: ["GET", "POST"]
+  }
+});
+
+// app.use(cors());
+// app.use(express.json());
+
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
+
+io.on('connection', (socket) => {
+  console.log('New client connected');
+
+  socket.on('disconnect', () => {
+    console.log('Client disconnected');
+  });
+});
+
+module.exports = { io };
+console.log('I11111111O:',{ io });
+console.log('I11111111O:', io.emit);
 server.listen(PORT, () => console.log(`Server is now running on port ${PORT}`));
+
+
+
+
+
+
+
+
+
+

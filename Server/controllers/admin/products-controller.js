@@ -1,5 +1,8 @@
 const { imageUploadUtil } = require("../../helpers/cloudinary");
 const Product = require("../../models/Product");
+const { io } = require("../../server");
+const test = require('../../server');
+
 
 const handleImageUpload = async (req, res) => {
   try {
@@ -34,9 +37,9 @@ const addProduct = async (req, res) => {
       totalStock,
       averageReview,
     } = req.body;
-
+    const { io } = require("../../server");
     console.log(averageReview, "averageReview");
-
+    console.log('io:', io); 
     const newlyCreatedProduct = new Product({
       image,
       title,
@@ -50,6 +53,7 @@ const addProduct = async (req, res) => {
     });
 
     await newlyCreatedProduct.save();
+    io.emit('newProduct', title);
     res.status(201).json({
       success: true,
       data: newlyCreatedProduct,
